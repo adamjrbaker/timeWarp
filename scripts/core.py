@@ -296,8 +296,6 @@ def bake_warp(warp, steps=1):
         maya.cmds.bakeResults(warped_nodes, sampleBy=steps, time=(frame_start, frame_end),
                               simulation=True, preserveOutsideKeys=True)
 
-        delete_warp(warp)
-
         return True
 
     return False

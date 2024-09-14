@@ -85,19 +85,19 @@ class TimeWarp(QtWidgets.QDialog):
         self.select_warped_btn.clicked.connect(lambda: core.select_warped_nodes(self.warp_select.currentText()))
         main_layout.addWidget(self.select_warped_btn)
 
-        self.add_btn = QtWidgets.QPushButton("Add To Warp")
+        self.add_btn = QtWidgets.QPushButton("Add Selected To Warp")
         self.add_btn.setEnabled(False)
         self.add_btn.setFixedHeight(45)
         self.add_btn.clicked.connect(self.on_add)
         main_layout.addWidget(self.add_btn)
 
-        self.remove_btn = QtWidgets.QPushButton("Remove From Warp")
+        self.remove_btn = QtWidgets.QPushButton("Remove Selected From Warp")
         self.remove_btn.setEnabled(False)
         self.remove_btn.setFixedHeight(45)
         self.remove_btn.clicked.connect(self.on_remove)
         main_layout.addWidget(self.remove_btn)
 
-        self.bake_btn = QtWidgets.QPushButton("Bake Out Warp")
+        self.bake_btn = QtWidgets.QPushButton("Bake Warp")
         self.bake_btn.setEnabled(False)
         self.bake_btn.setFixedHeight(45)
         self.bake_btn.clicked.connect(self.on_bake)
