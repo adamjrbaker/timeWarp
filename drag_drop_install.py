@@ -13,10 +13,10 @@ if sys.version_info > (3,):
 import maya.OpenMayaUI as omui
 
 # Custom
-from scripts import install
-from _versions import __version__, __doc__, __author__, __email__, __copyright__
+from src.python.timeWarp.api import install
+from src.python.timeWarp._versions import __version__, __doc__, __author__
 
-ICON_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'icons')
+ICON_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'src/python/timeWarp/icons')
 
 
 class WarpInstall(QtWidgets.QDialog):
@@ -84,7 +84,7 @@ class WarpInstall(QtWidgets.QDialog):
         module_layout.addWidget(self.module_browse, 1)
 
         self.install_button = QtWidgets.QPushButton(parent=self, text="Install Time Warp")
-        self.install_button.setStyleSheet("background-color : #16A085")
+        self.install_button.setStyleSheet("background-color : #27AE60")
         self.install_button.clicked.connect(self.run_install)
         main_layout.addWidget(self.install_button)
 

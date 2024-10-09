@@ -136,7 +136,7 @@ class WarpStatus(ompx.MPxNode):
 
         maya.cmds.menuItem("ATKTimeWarpOpenMenu",
                            label="Launch...",
-                           command="from timeWarp.scripts import widget; widget.launch()",
+                           command="from timeWarp.api import widget; widget.launch()",
                            sourceType="Python",
                            parent=main_menu
                            )
@@ -148,7 +148,7 @@ class WarpStatus(ompx.MPxNode):
                                        )
         maya.cmds.menuItem("ATKTimeWarpShelfMenu",
                            label="Create Shelf Button",
-                           command="from timeWarp.scripts import install; install.create_shelf_button(force=True)",
+                           command="from timeWarp.api import install; install.create_shelf_button(force=True)",
                            sourceType="Python",
                            parent=help_menu
                            )

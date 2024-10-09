@@ -7,7 +7,7 @@ import os
 from PySide2 import QtCore, QtWidgets, QtGui
 
 from timeWarp._versions import __version__, __doc__, __author__, __email__, __copyright__
-from timeWarp.scripts import core
+from timeWarp.api import core
 ICON_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../', 'icons')
 
 _WIDGET = None
@@ -57,7 +57,7 @@ class TimeWarp(QtWidgets.QDialog):
         self.create_warp_btn = QtWidgets.QPushButton("Create")
         self.create_warp_btn.setFixedWidth(70)
         self.create_warp_btn.setFixedHeight(30)
-        self.create_warp_btn.setStyleSheet("background-color : #16A085")
+        self.create_warp_btn.setStyleSheet("background-color : #27AE60")
         self.create_warp_btn.clicked.connect(self.create_warp)
         select_layout.addWidget(self.create_warp_btn)
 

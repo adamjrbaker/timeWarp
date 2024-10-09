@@ -10,7 +10,7 @@ import tempfile
 
 # Add repository base path to system paths, so Maya can access atk.
 tests_path = os.path.dirname(os.path.realpath(__file__))
-base_path = os.path.join(tests_path.rsplit(os.sep, 2)[0], 'scripts', 'python')
+base_path = os.path.join(tests_path.rsplit(os.sep, 2)[0], 'api', 'python')
 if base_path not in sys.path:
     sys.path.insert(0, base_path)
 
