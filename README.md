@@ -12,7 +12,7 @@ For simple installation use the drag_drop_install.py file into maya's viewport. 
 ![adambakerart_maya_dnd](https://github.com/adamjrbaker/timeWarp/assets/25186874/e95516a3-be54-4615-bbdc-194eb227273c)
 
 ### Manual Install
-1. Copy the folder "timeWarp" into your maya/scripts/ preferences directory. So your resulting path will be like:
+1. Copy the folder "src/python/timeWarp" into your maya/scripts/ preferences directory. So your resulting path will be like:
 
     **Windows**
     `C:/Users/<user>/Documents/maya/scripts/timeWarp`
@@ -49,10 +49,11 @@ Time Warp is created to be as simple as possible for all animators to use, allow
 
 ### UI
 To launch the UI there are two options, from the menu or from a shelf button. If you choses to add a shelf button when using the Drag and Drop install method you will be presented with a new button on your Custom shelf.
-![adambakerart_maya_gui](https://github.com/adamjrbaker/timeWarp/assets/25186874/e2d74036-c836-4026-b217-37c37096c729)
+![adambakerart_maya_gui](https://github.com/user-attachments/assets/3914bd46-7cf3-4a8d-ae3f-d760ce337e94)
+
 If not or you do a manual install the UI can be launch from the ATK menu bar at the top of your maya session. From here you do have the ability to add a shelf button at any time.  For those who would like todo it yourself run the command:
 ```python 
-from timeWarp.scripts import widget
+from timeWarp.api import widget
 widget.launch()
 ```
 and the shelf icon can be found: `\timeWarp\icons\TimeWarpShelf.svg`
